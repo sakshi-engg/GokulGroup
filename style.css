@@ -1,0 +1,59 @@
+body{
+    padding:0;
+    margin: 0;
+    background: rgb(9, 12, 13);
+
+}
+
+.main{
+    padding: 20px 0;
+}
+
+.container{
+    padding: 0 5%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.count-heading{
+    flex: 1;
+    font-size: 20px;
+    text-align:center;
+    border-right: 0.1px solid rgb(182, 129, 107);
+    color: rgb(182, 129, 107);
+}
+
+.count-heading>h2{
+    color:#ffffff;
+}
+
+.count{
+    font-size: 48px;
+}
+
+.head{
+margin-left: 400px;
+padding: 20px;
+color: rgb(182, 129, 107);
+font-style:bold ;
+}
+
+/* Style for Details About Gokul Event */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
