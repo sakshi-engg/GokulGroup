@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gokul Event Group</title>
+    <link rel="stylesheet" href="videocss.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    
+    <div class="hero">
+
+        <video autoplay loop muted  plays-inline class="vid">
+
+            <source src="Gokul Event Video 1.mp4" >
+
+        </video>
+
+
+    <nav>
+        <img src="gukul logo.png" alt="logo" class="logo">
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <!-- <div class="content">
+        <h1>GOKUL EVENTS</h1>
+     <a href="#">Explore</a>  
+    </div> -->
+
+
+<!-- Services & Products Box -->
+
+  <div class="box">
+    <img src="icon1.png" alt="Paris" width="400" height="400"> 
+  </div>
+
+  <div class="box2">
+    <img src="icon2.png" alt="Paris" width="400" height="400">
+  </div>
+
+
+<!-- Details About Gokul Event -->
+<!-- <h1>Gokul Event Group</h1>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Corporate Event Management Company in Mumbai - Trusted by Over 200+ Brand
+    </h2>
+    <p>We are nationally recognized event planning & organising company based in Mumbai. We started with a purpose to provide one stop solutions for all your Event-related worries. Craftworld Events company specialize in corporate events management, BTL activation. we also highly recommended for conference event organizing and exhibition stall designing.This is the best Event Management Agency in Mumbai, you will find, period. We’ve always prided ourselves on being more than just event orgainser firm. We proudly present STAGE WORLD, a complete production house having all the experience & capabilities of producing & managing exhibition & events. The in-house staging unit, fabrication & designing workshop, audio visual equipment & basic sound is our biggest asset to provide the state of the art equipment, technical staff and experienced event support around the world.
+
+    </p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div> -->
+
+
+
+
+<!-- Counter On-Scroll  -->
+<div style="height: 100px;"></div>
+<div class="head"><h2 >SUCCESSFULLY COMPLETED 2000+ PROJECTS</h2>
+</div>
+
+    <section class="main" id="main">
+
+        <div class="container">
+            <div class="count-heading">
+                <div class="count" max-data="2000">1</div>
+                <h2>Events</h2>
+            </div>
+            <div class="count-heading">
+                <div class="count" max-data="200">1</div>
+                <h2>Clients</h2>
+            </div>
+
+            <div class="count-heading">
+                <div class="count" max-data="96">1</div>
+                <h2>Success Rate</h2>
+            </div>
+
+            <div class="count-heading">
+                <div class="count" max-data="50">1</div>
+                <h2>Years Of Experience</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript code -->
+    <script>
+        var count = document.getElementsByClassName("count");
+        var inc = [];
+        function intervalFunc(){
+            for(let i=0; i<count.length; i++){
+                inc.push(1);
+                // console.log(inc);
+                if(inc[i] != count[i].getAttribute("max-data")){
+                    inc[i]++;
+                }  if (i === 2) { // Check if it's the "Success Rate" counter
+            count[i].innerHTML = inc[i] + "<span>%</span>";
+        } else {   count[i].innerHTML = inc[i]+ "<span> + </span>";;
+    }
+            }
+        }
+var main = document.getElementById("main");
+window.onscroll = function(){
+   var timer = setInterval(()=>{
+        var topElem = main.offsetTop;
+    var btmElem = main.offsetTop + main.clientHeight;
+    var topScreen = window.pageYOffset;
+    var btmScreen = window.pageYOffset + window.innerHeight;
+
+    if(btmScreen > topElem && topScreen < btmElem ){
+    intervalFunc();
+} else{
+    clearInterval(timer);
+    for(let i = 0; i < count.length; i++){
+        count[i].innerHTML = 1;
+        inc = [];
+    }
+}
+
+    }, 100);
+    
+}  
+    </script>
+
+</body>
+</html>
